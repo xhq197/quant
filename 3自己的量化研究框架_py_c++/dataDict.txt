@@ -1,0 +1,88 @@
+##daily
+股票日线数据
+参数名称	参数描述
+code 股票代码
+date 交易日期
+index 是否是index {True，False}
+open 开盘价
+high  最高价
+close 收盘价
+low 最低价
+volume 成交量
+amount 成交额
+turnoverratio 换手率
+is_trading 当日是否交易 {True，False}
+
+##daily_hfq
+股票日线数据—价格后复权
+参数名称	参数描述
+code 股票代码
+date 交易日期
+index 是否是index {True，False}
+open 开盘价
+high  最高价
+close 收盘价
+low 最低价
+volume 成交量
+amount 成交额
+turnoverratio 换手率
+is_trading 当日是否交易 {True，False}
+
+
+##basic
+数据来源：http://baostock.com/baostock/index.php/%E8%AF%81%E5%88%B8%E5%9F%BA%E6%9C%AC%E8%B5%84%E6%96%99
+参数名称	参数描述
+code	证券代码
+code_name	证券名称
+ipoDate	上市日期
+outDate	退市日期
+type	证券类型，其中1：股票，2：指数,3：其它
+status	上市状态，其中1：上市，0：退市
+返回示例数据
+code	code_name	ipoDate	outDate	type	status
+sh.600000	浦发银行	1999-11-10		1	1
+
+
+##finance_report
+数据来源：http://data.eastmoney.com/bbsj/yjbb/600000.html
+    'code': code,
+    # REPORTDATE报告期
+    'report_date': report['REPORTDATE'][:10],
+    # 公告日期 # UPDATE_DATE最新公告时间
+    'announced_date': report['UPDATE_DATE'][:10],
+    # 每股收益（元）
+    'eps': report['BASIC_EPS'],
+    #每股收益（扣除）（元）
+    'DEDUCT_BASIC_EPS':report['DEDUCT_BASIC_EPS'],
+    #营业收入
+    'TOTAL_OPERATE_INCOME':report['TOTAL_OPERATE_INCOME'],
+    #净利润
+    'PARENT_NETPROFIT':report['PARENT_NETPROFIT'],
+    # YSTZ营业收入同比增长（%）
+    'income_ratio':report['YSTZ'],
+    # SJLTZ净利润同比增长（%）
+    'netprofit_ratio':report['SJLTZ'],
+    # BPS每股净资产(元)
+    'BPS':report['BPS'],
+    # MGJYXJJE每股经营现金流量(元)
+    'operating_per_share':report['MGJYXJJE'],
+    # YSHZ营业收入季度环比增长(%)
+    'income_quart_ratio':report['YSHZ'],
+    # SJLHZ 净利润季度环比增长(%)
+    'netprofit_quart_ratio':report['SJLHZ'],
+    # PUBLISHNAME 怀疑是行业分类
+    'publish_name':report['PUBLISHNAME'],
+    # NOTICE_DATE 首次公告日期
+    'notice_date':report['NOTICE_DATE'],
+    # QDATE 季度 2017Q3
+    'quart_date':report['QDATE'],
+    # SECUCODE 股票代码1 600000SH
+    'code1':report['SECUCODE'],
+    # SECURITY_NAME_ABBR 名称
+    'name':report['SECURITY_NAME_ABBR'],
+    # TRADE_MARKET 交易所板块
+    'trade_market':report['TRADE_MARKET'],
+    # SECURITY_TYPE 股票类别 A股
+    'security_type':report['SECURITY_TYPE'],
+    #ASSIGNDSCRPT 利润分配 如"10派1.80元(含税)"
+    'dividend':report['ASSIGNDSCRPT']

@@ -1,0 +1,11 @@
+(1)
+默认使用在path.txt中粘贴python.exe；
+若运行平台路径1下的回测按钮运行失败，请将装有pandas、numpy、warnings、traceback包的python.exe路径复制到path1.txt文件中，如：
+D:\set_up\anaconda\python.exe。
+
+(2)
+如果路径1使用失败，请将anaconda promp路径粘贴在path2.txt中，如：
+D:\set_up\anaconda\Scripts\activate.bat D:\set_up\anaconda
+并在软件中尝试使用path2下的回测按钮。
+
+注意：将“/”替换成“\”
