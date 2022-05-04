@@ -1,8 +1,5 @@
 #  -*- coding: utf-8 -*-
 
-"""
-"""
-
 
 from pymongo import ASCENDING, DESCENDING
 import pandas as pd

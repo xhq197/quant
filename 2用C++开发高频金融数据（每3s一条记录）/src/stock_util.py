@@ -1,7 +1,6 @@
 #  -*- coding: utf-8 -*-
 
-"""
-"""
+
 
 from pymongo import ASCENDING
 from database import DB_CONN
